@@ -17,9 +17,9 @@ body {
   margin: 0;
   background: #261c33;
   overflow: hidden;
-  display: flex; 
-  align-items: center; 
-  justify-content: center 
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 h2 {
@@ -69,6 +69,10 @@ button {
   outline: none;
   border: none;
   margin-right: 10px;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 label{

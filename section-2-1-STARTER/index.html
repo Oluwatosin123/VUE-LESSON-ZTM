@@ -8,6 +8,10 @@
   <body>
     <div id="app" v-cloak>
       <p>  {{ fullName }} </p>
+      <!-- long for v-bind -->
+      <!-- <p><a v-bind:href="url" target="_blank">Google</a></p> -->
+
+      <!-- short form of v-bind is : and is attached to attributes  -->
       <p><a :href="url" target="_blank">Google</a></p>
       <p v-html="raw_url"> </p>
       <p>{{ typeof age }}</p>
@@ -16,8 +20,8 @@
       <label>firstName</label>
       <input type="text" v-model.lazy.trim = "firstName" />
 
-      <!-- <label>lastName</label>
-      <input type="text" v-model = "lastName" /> -->
+      <label>lastName</label>
+      <input type="text" v-model = "lastName" />
       <label> middleName</label>
       <input type="text" @keyup.enter = "updateMiddleName">
 
@@ -28,7 +32,8 @@
       <input type="number" v-model.number="age">
 
       <button type="button" v-on:click="increment">Increment</button>
-      <button type="button" @:click= "age--">Decrement</button>
+      <button type="button" @click= "age--">Decrement</button>
+      <!-- <button type="button" @click.ctrl= "age--">Decrement</button> -->
     </div>
     <!-- <div id="myapp">
       {{ firstName }}
